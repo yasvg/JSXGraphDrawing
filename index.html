@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Create Graph</title>
+
+ <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+  <link href="lib/jsxgraph/css/jsxgraph.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+ 
+
+</head>
+
+<body>
+
+
+
+<div class="wrapper">
+
+	<div class="container">
+    
+    	<div class="tab_holder">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation"><a href="#instructions_div" aria-controls="instructions_div" role="tab" data-toggle="tab" data-name="instructions">Instructions</a></li>
+    <li role="presentation" class="active"><a href="#creategraph_div" aria-controls="creategraph_div" role="tab" data-toggle="tab" data-name="creategraph">Create Graph</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  
+    <div role="tabpanel" class="tab-pane" id="instructions_div">
+		<p>The  &quot;Create Graph&quot; tab opens an empty canvas with the &ldquo;Add Vertices and  Edges&rdquo; radio button automatically selected at the bottom of the window.&nbsp;</p>
+<ol>
+  <li>You can click anywhere on the canvas and drag the  cursor to create an <em>edge</em>.&nbsp;</li><br />
+  <li>By clicking and dragging the cursor you can add new <em>vertices</em> and <em>edges</em>.&nbsp;</li><br />
+  <li>You can create an <em>isolated vertex</em> by double-clicking anywhere on the canvas.</li><br />
+  <li>To create an <em>edge</em> connecting two existing vertices click on one of the vertices and drag the  cursor to the other vertex.</li><br />
+  <li>You can connect the same two vertices more than once  to create <em>multiple edges</em>. (When you  do this, the edges will automatically change and become curved.)</li><br />
+  <li>You can create a <em>loop</em> at a vertex by clicking on the vertex and dragging the cursor back to the  vertex. (You just have to drag the cursor a little bit away from the vertex and  then back.) </li><br />
+  <li>By selecting the &ldquo;Move Vertices&rdquo; button you can move  the vertices around. Click on a vertex and drag it to a new position. The  vertex and all edges incident to it will move accordingly.</li><br />
+  <li>The &ldquo;Tallies&rdquo; window shows a running tally of the  total number of vertices, the number of even and odd vertices, the number of  edges and the sum of the degrees of the vertices of the graph.</li><br />
+  <li>The vertices are labeled <em>A</em>, <em>B</em>, <em>C</em>, etc. in the order they are created.  You can change the label of any vertex by double-clicking on the vertex. A  popup window will allow you to enter a new label or keep the old label. If you  don&rsquo;t want to see the labels, check the &ldquo;Hide Labels&rdquo; box.</li><br />
+  <li>If you  check the &ldquo;Show Degrees&rdquo; box, the degrees will appear by each vertex and the  odd vertices will be circled in red.</li><br />
+  <li>At any  time you can undo your last move by clicking the &ldquo;Undo Last&rdquo; button. If you  want to start from scratch you can erase all your work by clicking the &ldquo;Reset&rdquo;  button.</li>
+</ol>
+
+    </div>
+    
+    <div role="tabpanel" class="tab-pane active" id="creategraph_div">
+        <div class="panel buttons_div">
+			<input type="radio" name="commands" id="add_vrtices" checked="checked"><label for="add_vertices">Add Vertices and Edges</label>
+			<input type="radio" name="commands" id="move_vertices"><label for="move_vertices">Move Vertices</label>
+            <button id="resetBtn">Reset</button>
+		</div>
+		<div class="panel graph_div" id="graph_div"></div>
+    </div>
+    
+<!--
+    <div class="radio_content_holder">
+ 		<div class="col-sm-2 holder_first"></div>
+   	    <div class="col-sm-9 holder_second"><button class="btn calculate_btn" id="calculate_btn">Calculate Selected Field</button></div>
+   	    <div class="col-sm-1 holder_third"></div>
+    </div>
+-->
+    
+  </div>
+  
+</div>
+
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+<div class="footer_holder">
+
+
+</div>
+
+</div>
+
+
+    <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.3/jsxgraphcore.js"></script>
+    <script src="js/CreateGraph.js"></script>
+    <script src="js/GraphMain.js"></script>
+</body>
+</html>
